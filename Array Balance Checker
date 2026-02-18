@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    
+    int first_half = N / 2;
+    long long sum1 = 0, sum2 = 0;
+    
+    for(int i = 0; i < first_half; i++) {
+        int num;
+        scanf("%d", &num);
+        sum1 += num;
+    }
+    
+    for(int i = first_half; i < N; i++) {
+        int num;
+        scanf("%d", &num);
+        sum2 += num;
+    }
+    
+    if(sum1 == sum2) {
+        printf("BALANCED\n");
+    } else {
+        printf("NOT BALANCED\n");
+    }
+    
+    return 0;
+}
